@@ -79,7 +79,7 @@ const SavedOrders = (props) => {
     if (user) {
       fetchData();
     }
-  }, []);
+  });
 
   return (
     <Fragment>
