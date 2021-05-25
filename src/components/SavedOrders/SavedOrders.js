@@ -27,7 +27,6 @@ const SavedOrders = (props) => {
     Object.keys(data.order).forEach((el) => {
       let updatedObject = { ...data.order[el] };
       updatedObject.total = +data.order[el].price * +data.order[el].quantity;
-      console.log(el.price)
       arrayExcel.push(updatedObject)
     });
   });
@@ -77,9 +76,9 @@ const SavedOrders = (props) => {
 
   useEffect(() => {
     if (user) {
-      fetchData();
+         fetchData();
     }
-  });
+  },[]);
 
   return (
     <Fragment>
